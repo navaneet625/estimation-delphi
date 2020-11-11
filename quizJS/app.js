@@ -48,6 +48,7 @@ function getNewQuestion(){
 	for(let i=0; i<optionLen;i++){
 		availableOptions.push(i);
 	}
+	optionContainer.innerHTML="";
 	let animationDelay = 0.15;
 	//create option in html
 	for(let i=0;i<optionLen;i++){
