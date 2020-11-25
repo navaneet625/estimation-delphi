@@ -1,31 +1,29 @@
-var slideIndex1 = 1;
-showSlides(slideIndex1);
-
-function plusSlides(n) {
-  showSlides(slideIndex1 += n);
+function sleep(milliseconds,slideIndex) {
+  var date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+    slides[slideIndex-1].style.display = "block";	
+  } while (currentDate - date < milliseconds);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex1 = n);
-}
+var slideIndex = 0;
+showSlides();
 
-function showSlides(n) {
+function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlides1");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex1 = 1}    
-  if (n < 1) {slideIndex1 = slides.length}
+  var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    if(slideIndex!=i)
+    slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex1-1].style.display = "block";  
-  dots[slideIndex1-1].className += " active";
+  var prev=slideIndex;
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  //slides[prev].style.display = "none";
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides,7000); // Change image every 7 seconds
 }
-
-
 var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button

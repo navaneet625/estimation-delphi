@@ -1,20 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>QUIZ</title>
+	<title>ESTIMATION</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet"href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+	<link rel="stylesheet"href="quizstyle.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-<!-- ####################################################### -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <!-- <a class="navbar-brand" href="">Logo</a> -->
+      <p class="navbar-text" style="color:white;font-size:17px;">
+          <img src="https://cdn.glitch.com/1fcf4864-c21d-4444-a982-e1d36cadfa6e%2Fvlabs.png?1605079090671" alt="vlabs" id="vlabsimg" class="responsive">
+        </p>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-info-sign"></span>INTRODUCTION</a></li>
+        <li><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span>SIMULATION</a></li>
+        <li><a href="experiment.html"><span class="glyphicon glyphicon-erase"></span>EXPERIMENT</a></li>
+        <li><a href="quiz.html"><span class="glyphicon glyphicon-edit"></span>QUIZ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<hr style="border-color: #29292c">
+	<hr style="border-color: #29292c">
+	<h1></h1>
+<!-- ##############STEP1---START-QUIZ######################################### -->
 	<div class="home-box custom-box">
-		<h3>Instruction:</h3>
+		<h3 style="color:#2c3e50 font-size:500">Instruction:</h3>
 		<p>Total number of questions : <span class="total-question"></span></p>
-		<button type="button" class="btn" onclick="window.location.href='index.html'">Main Page</button>
-		<button type="button" class="btn" onclick="window.location.href='experiment.html'">Next Page</button>
 		<button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
 	</div>
-<!-- ####################################################### -->
+<!-- ##############STEP2---QUESTION-SET######################################### -->
 	<div class="quiz-box custom-box hide">
 		<div class="question-number">
 			
@@ -22,14 +49,18 @@
 		<div class="question-text">
 		
 		</div>
-		<div class="option-container">
-
+		<div class="option-container ">
+			<!-- <div id="op" class="option">A</div>
+			<div id="op" class="option">B</div>
+			<div id="op" class="option">C</div>
+			<div id="op" class="option">D</div> -->
 		</div>
 		<div class="next-question">
 			<button type="button" class="btn" onclick="next()">Next</button>
+			<button type="button" class="btn" onclick="submit()">Submit</button>
 		</div>
 	</div>
-<!-- ####################################################### -->
+<!-- ##################STEP3---RESULT##################################### -->
 	<div class="result-box custom-box hide">
 		<h1>Quiz Result</h1>
 		<table>
@@ -57,8 +88,14 @@
 		<button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
 		<button type="button" class="btn" onclick="goToHome()">Go to Home</button>
 	</div>
-<!-- ####################################################### -->
+<!-- ####################QUIZ--END################################### -->
 	<script type="text/javascript" src="quizJS/question.js"></script>
-	<script type="text/javascript" src="quizJS/app.js"></script>	
+	<script type="text/javascript" src="quizJS/app.js"></script>
+<!-- ####################FOOTER###################################### -->
+<footer>    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-arrow-up"></span></button>
+          Authors: Navaneet Kumar Singh | Naman Juneja |  Copyright &#169; 2020 All rights reserved
+          <script src="script.js"></script>
+</footer>
 </body>	
 </html>

@@ -5,6 +5,7 @@ const optionContainer = document.querySelector(".option-container");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
+//experi/...
 
 
 let questionCounter = 0;
@@ -13,7 +14,6 @@ let availableQuestions = [];
 let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
-
 //push the question into availableQuestion array
 function setAvailableQuestions(){
 	const totalQuestion = quiz.length;
@@ -43,12 +43,15 @@ function getNewQuestion(){
 	// console.log(questionIndex)
 	// console.log(availableQuestions)
 	//console.log(currentQuestion.options)
-	const optionLen = currentQuestion.options.length
+
+	const optionLen = currentQuestion.options.length;
 	//push options into availableOptions Array
 	for(let i=0; i<optionLen;i++){
-		availableOptions.push(i);
+		availableOptions.push(i)
 	}
+
 	optionContainer.innerHTML="";
+	
 	let animationDelay = 0.15;
 	//create option in html
 	for(let i=0;i<optionLen;i++){
@@ -62,7 +65,7 @@ function getNewQuestion(){
 		//console.log(optionIndex);
 		//console.log(availableOptions);
 		const option = document.createElement("div");
-
+		//const  option = document.getElementByClassName('option')
 		option.innerHTML = currentQuestion.options[optionIndex];
 		option.id =optionIndex;
 		option.style.animationDelay =animationDelay +'s';
@@ -71,6 +74,7 @@ function getNewQuestion(){
 		optionContainer.appendChild(option)	
 		option.setAttribute("onclick","getResult(this)");
 	}
+
 	questionCounter++;
 }
 //get the result of current attempt
@@ -134,6 +138,12 @@ function goToHome(){
 	homeBox.classList.remove("hide");
 	resetQuiz();
 }
+function submit(){
+	quizBox.classList.add("hide");
+	resultBox.classList.remove("hide");
+	quizResult();	
+}
+
 //..........................................................
 //..........................................................
 //..........................................................

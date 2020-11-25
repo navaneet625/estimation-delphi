@@ -1,6 +1,5 @@
 
 
-
 //array of Objects
 //console.log("hello");
 const quiz = [
@@ -26,7 +25,7 @@ const quiz = [
 },
 {
 	q:"when is Acceptance Testing performed in Agile development ?",
-	options:['On request of customer','After syztem is ready','At the end of each iteration','Daily'],
+	options:['On request of customer','After system is ready','At the end of each iteration','Daily'],
 	answer:2
 },
 {
@@ -35,7 +34,7 @@ const quiz = [
 	answer:3
 },
 {
-	q:"Agile is ",
+	q:"Agile is.. ",
 	options:['Sequential','Iterative','Incremental','Iterative & Incremental'],
 	answer:3
 },
