@@ -1,2 +1,3 @@
-# ssdProject
-Agile estimation.
+# Agile estimation technique
+Delphi estimation
+
